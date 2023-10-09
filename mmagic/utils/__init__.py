@@ -11,6 +11,8 @@ from .trans_utils import (add_gaussian_noise, adjust_gamma, bbox2mask,
                           brush_stroke_mask, get_irregular_mask, make_coord,
                           random_bbox, random_choose_unknown)
 from .typing import ConfigType, ForwardInputs, LabelVar, NoiseVar, SampleList
+from .common import default_conv, Scale, MeanShift, BasicBlock, ResBlock, LuConv, Upsampler
+from .tools import normalize, same_padding, extract_image_patches, reverse_patches, reduce_mean, reduce_std, reduce_sum
 
 __all__ = [
     'modify_args', 'print_colored_log', 'register_all_modules', 'try_import',
@@ -19,5 +21,7 @@ __all__ = [
     'random_choose_unknown', 'add_gaussian_noise', 'adjust_gamma',
     'make_coord', 'bbox2mask', 'brush_stroke_mask', 'get_irregular_mask',
     'random_bbox', 'reorder_image', 'to_numpy', 'get_box_info',
-    'can_convert_to_image', 'all_to_tensor'
+    'can_convert_to_image', 'all_to_tensor', 'default_conv', 'Scale', 'MeanShift', 
+    'BasicBlock', 'ResBlock', 'LuConv', 'Upsampler', 'normalize', 'same_padding', 
+    'extract_image_patches', 'reverse_patches', 'reduce_mean', 'reduce_std', 'reduce_sum'
 ]

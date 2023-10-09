@@ -71,7 +71,8 @@ class GenerateFrameIndices(BaseTransform):
             center_frame_idx = np.random.randint(0, frames_per_clip + 1)
             start_frame_idx = center_frame_idx - num_half_frames * interval
             end_frame_idx = center_frame_idx + num_half_frames * interval
-        frame_name = f'{center_frame_idx:08d}'
+        # frame_name = f'{center_frame_idx:08d}'
+        frame_name = f'{end_frame_idx:08d}'
         neighbor_list = list(
             range(center_frame_idx - num_half_frames * interval,
                   center_frame_idx + num_half_frames * interval + 1, interval))
@@ -190,7 +191,7 @@ class GenerateFrameIndiceswithPadding(BaseTransform):
                      f'{self.filename_tmpl.format(idx)}.png')
             for idx in frame_list
         ]
-        gt_paths = [osp.join(gt_path_root, clip_name, f'{frame_name}.png')]
+        gt_paths = [osp.join(gt_path_root, clip_name, f'{self.filename_tmpl.format(frame_list[-1])}.png')]
 
         results['img_path'] = img_paths
         results['gt_path'] = gt_paths

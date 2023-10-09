@@ -68,6 +68,8 @@ from .tof import TOFlowVFINet, TOFlowVSRNet, ToFResBlock
 from .ttsr import LTE, TTSR, SearchTransformer, TTSRDiscriminator, TTSRNet
 from .vico import ViCo
 from .wgan_gp import WGANGP
+from .dvsr import DVSR, DVSRNet
+from .basicvsr_modified import BasicVSRNetModified
 
 __all__ = [
     'AOTEncoderDecoder', 'AOTBlockNeck', 'AOTInpaintor',
@@ -98,5 +100,5 @@ __all__ = [
     'ControlStableDiffusion', 'DreamBooth', 'TextualInversion', 'DeblurGanV2',
     'DeblurGanV2Generator', 'DeblurGanV2Discriminator',
     'StableDiffusionInpaint', 'ViCo', 'FastComposer', 'AnimateDiff',
-    'UNet3DConditionMotionModel', 'StableDiffusionXL'
+    'UNet3DConditionMotionModel', 'StableDiffusionXL', 'DVSR', 'DVSRNet', 'BasicVSRNetModified'
 ]
